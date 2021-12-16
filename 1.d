@@ -1,11 +1,13 @@
 // c) удалить все символы, не являющиеся строчными латинскими буквами;
-#include <iostream>
-int main()
-{
-int q;
-    while (q != EOF && q!='.') {
-        q = getchar();
-        if (q >= 96 && q <= 122)
-            putchar(q);
+#include <stdio.h>
+int main(){
+int z;
+    while (z != EOF && z !='.') {
+        z = getchar();
+        if (z >= 65 && z <= 90) {
+            putchar(z + 32);
+            continue;
+        }
+        putchar(z);
     }
 }
